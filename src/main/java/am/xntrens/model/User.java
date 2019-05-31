@@ -19,5 +19,5 @@ public class User {
     private Integer id;
     private String userName;
     private String address;
-    private String age;
+    private Integer age;
 }

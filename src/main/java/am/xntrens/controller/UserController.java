@@ -10,8 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.persistence.EntityNotFoundException;
 
+/**
+ * @author David Karchikyan.
+ */
+
 @RestController
-@RequestMapping
+@RequestMapping("/xntrends")
 public class UserController {
 
     private UserService userService;
@@ -21,7 +25,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/user/{id}", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<User> getUserById(@PathVariable (name = "id") Integer id) throws EntityNotFoundException {
+    public ResponseEntity<User> getUserById(@PathVariable(name = "id") Integer id) throws EntityNotFoundException, NumberFormatException {
         return ResponseEntity.ok(userService.getUserById(id));
     }
 }
