@@ -12,3 +12,5 @@ CREATE TABLE xntrends.USER (
   ENGINE = InnoDB;
 
 INSERT INTO xntrends.USER VALUES (null, 'Armen', 'Hakobyan 3', 15);
+INSERT INTO xntrends.USER VALUES (null, 'David', 'Paronyan 11', 40);
+INSERT INTO xntrends.USER VALUES (null, 'Harut', 'Tichina 1', 27);

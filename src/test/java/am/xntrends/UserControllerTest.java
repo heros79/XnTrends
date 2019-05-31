@@ -33,21 +33,20 @@ public class UserControllerTest {
     @MockBean
     private UserService userService;
 
-
     @Test
     public void getUserByUd() throws Exception {
 
+        final int userId = 1;
+
         User user = new User();
-        user.setId(1);
+        user.setId(userId);
         user.setUserName("Armen");
         user.setAddress("Hakobyan 3");
         user.setAge(15);
 
-        given(userService.getUserById(1)).willReturn(user);
+        given(userService.getUserById(userId)).willReturn(user);
 
         final String url = "/xntrends/user/{id}";
-
-        int id = 1;
 
         final String json = "{" +
                 "    \'id' : 1," +
@@ -56,7 +55,7 @@ public class UserControllerTest {
                 " 'age': 15" +
                 "}";
 
-        mockMvc.perform(get(url, id))
+        mockMvc.perform(get(url, userId))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType("application/json;charset=UTF-8"))
                 .andExpect(content().json(json, true))
