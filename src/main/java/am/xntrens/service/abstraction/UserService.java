@@ -1,8 +1,9 @@
 package am.xntrens.service.abstraction;
 
 import am.xntrens.model.User;
-import am.xntrens.utils.exceptions.UserNotFoundException;
 import org.springframework.stereotype.Component;
+
+import javax.persistence.EntityNotFoundException;
 
 /**
  * @author David Karchikyan.
@@ -11,5 +12,5 @@ import org.springframework.stereotype.Component;
 
 @Component
 public interface UserService {
-    public User getUserById(int id) throws UserNotFoundException;
+    public User getUserById(int id) throws EntityNotFoundException;
 }

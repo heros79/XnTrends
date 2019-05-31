@@ -16,7 +16,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @EqualsAndHashCode
 @Entity
-@Table
+@Table(name = "USER")
 public class UserEntity implements Serializable {
 
     private static final long serialVersionUID = 4478927152975735280L;

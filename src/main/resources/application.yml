@@ -16,3 +16,6 @@ spring:
     show-sql: true
   messages:
     basename: validation
+
+logging:
+  file: log.txt
