@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User user(int id) throws UserNotFoundException {
+    public User getUserById(int id) throws UserNotFoundException {
         return entityToDto.user(userDao.getOne(id));
     }
 }

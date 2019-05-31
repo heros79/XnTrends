@@ -11,5 +11,5 @@ import org.springframework.stereotype.Component;
 
 @Component
 public interface UserService {
-    public User user(int id) throws UserNotFoundException;
+    public User getUserById(int id) throws UserNotFoundException;
 }
