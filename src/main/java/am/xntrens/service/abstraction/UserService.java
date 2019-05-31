@@ -1,6 +1,7 @@
 package am.xntrens.service.abstraction;
 
 import am.xntrens.model.User;
+import am.xntrens.utils.exceptions.UserNotFoundException;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,5 +11,5 @@ import org.springframework.stereotype.Component;
 
 @Component
 public interface UserService {
-    public User user(int id);
+    public User user(int id) throws UserNotFoundException;
 }

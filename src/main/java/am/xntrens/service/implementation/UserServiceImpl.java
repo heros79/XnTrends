@@ -3,6 +3,7 @@ package am.xntrens.service.implementation;
 import am.xntrens.dao.UserDao;
 import am.xntrens.model.User;
 import am.xntrens.service.abstraction.UserService;
+import am.xntrens.utils.exceptions.UserNotFoundException;
 import am.xntrens.utils.mapper.EntityToDto;
 import org.mapstruct.factory.Mappers;
 import org.springframework.stereotype.Service;
@@ -24,7 +25,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User user(int id) {
+    public User user(int id) throws UserNotFoundException {
         return entityToDto.user(userDao.getOne(id));
     }
 }
